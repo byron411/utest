@@ -1,6 +1,7 @@
 package co.com.choucair.certification.utest.stepdefinitions;
 
 import co.com.choucair.certification.utest.tasks.OpenUp;
+import co.com.choucair.certification.utest.tasks.Register;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -18,7 +19,7 @@ public class ChoucairUtestStepDefinitions {
     }
     @Given("^than Byron wants to log into the Utest System$")
     public void thanByronWantsToLogIntoTheUtestSystem() {
-        OnStage.theActorCalled("Byron").wasAbleTo(OpenUp.estaPagina());
+        OnStage.theActorCalled("Byron").wasAbleTo(OpenUp.estaPagina(), (Register.onThePage()));
     }
 
     @When("^he needs to register in the Utest system$")
