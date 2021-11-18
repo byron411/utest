@@ -8,7 +8,7 @@ public class ChoucairRegisterPage extends PageObject {
 
     public static final Target REGISTER_BUTTON=Target.the("button that sign in utest system")
             .located(By.xpath("//a[contains(@class, 'unauthenticated-nav-bar__sign-up')]"));
-    
+
     public static final Target INPUT_FIRST_NAME=Target.the("Where do we write the first name")
             .located(By.id("firstName"));
     public static final Target INPUT_LAST_NAME=Target.the("Where do we write the last name")
@@ -23,5 +23,5 @@ public class ChoucairRegisterPage extends PageObject {
             .located(By.id("birthYear"));
 
     public static final Target NEXT_BUTTON=Target.the("button that sign in utest system")
-            .located(By.xpath("//div[@class='form-group col-xs-12 text-right']//a[@class,'btn btn-blue')]"));
+            .located(By.xpath("//div[@class='form-group col-xs-12 text-right']//span[contains(text(),'Next: Location')]"));
 }
