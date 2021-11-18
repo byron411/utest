@@ -1,11 +1,13 @@
 package co.com.choucair.certification.utest.stepdefinitions;
 
+import co.com.choucair.certification.utest.questions.Answer;
 import co.com.choucair.certification.utest.tasks.OpenUp;
 import co.com.choucair.certification.utest.tasks.Register;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
@@ -29,7 +31,7 @@ public class ChoucairUtestStepDefinitions {
 
     @Then("^he get a nameuser$")
     public void heGetANameuser() {
-        
+        //OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(Answer.toThe(question)));
     }
 
 }
