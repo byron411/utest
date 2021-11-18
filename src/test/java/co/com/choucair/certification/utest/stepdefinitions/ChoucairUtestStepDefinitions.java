@@ -27,9 +27,9 @@ public class ChoucairUtestStepDefinitions {
         OnStage.theActorInTheSpotlight().attemptsTo(Register.onThePage());
     }
 
-    @Then("^he can enter the registration data$")
-    public void heCanEnterTheRegistrationData() {
-
+    @Then("^he get a nameuser$")
+    public void heGetANameuser() {
+        
     }
 
 }
