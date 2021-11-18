@@ -19,12 +19,12 @@ public class ChoucairUtestStepDefinitions {
     }
     @Given("^than Byron wants to log into the Utest System$")
     public void thanByronWantsToLogIntoTheUtestSystem() {
-        OnStage.theActorCalled("Byron").wasAbleTo(OpenUp.estaPagina(), (Register.onThePage()));
+        OnStage.theActorCalled("Byron").wasAbleTo(OpenUp.estaPagina());
     }
 
     @When("^he needs to register in the Utest system$")
     public void heNeedsToRegisterInTheUtestSystem() {
-
+        OnStage.theActorInTheSpotlight().attemptsTo(Register.onThePage());
     }
 
     @Then("^he can enter the registration data$")

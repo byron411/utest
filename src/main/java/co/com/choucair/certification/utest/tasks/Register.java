@@ -1,6 +1,7 @@
 package co.com.choucair.certification.utest.tasks;
 
 import co.com.choucair.certification.utest.userinterface.ChoucairRegisterPage;
+import cucumber.api.java.vi.Cho;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -24,7 +25,22 @@ public class Register implements Task {
                 SelectFromOptions.byVisibleText("April").from(ChoucairRegisterPage.INPUT_MONTH),
                 SelectFromOptions.byVisibleText("15").from(ChoucairRegisterPage.INPUT_DAY),
                 SelectFromOptions.byVisibleText("1993").from(ChoucairRegisterPage.INPUT_YEAR),
-                Click.on(ChoucairRegisterPage.NEXT_BUTTON));
+                Click.on(ChoucairRegisterPage.NEXT_BUTTON),
+
+                //vista 2
+                //Enter.theValue("IngresarCodigoPostal").into(ChoucairRegisterPage.INPUT_CODPOSTAL),
+                Click.on(ChoucairRegisterPage.NEXT_DEVICES),
+
+                //vista 3
+                Click.on(ChoucairRegisterPage.NEXT_STEP),
+
+                //vista 4
+                Enter.theValue("IngresarPASS").into(ChoucairRegisterPage.INPUT_PASS),
+                Enter.theValue("IngresarPASS").into(ChoucairRegisterPage.INPUT_REPEAT_PASS),
+                Click.on(ChoucairRegisterPage.CHECK1),
+                Click.on(ChoucairRegisterPage.CHECK2),
+                Click.on(ChoucairRegisterPage.NEXT_COMPLETE)
+                );
 
     }
 }
